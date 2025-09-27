@@ -6,6 +6,7 @@ import {
 } from "@kinde-oss/kinde-auth-nextjs/components";
 import { buttonVariants } from "./ui/button";
 import { ArrowRightIcon } from "lucide-react";
+import { MaxWidthWrapper } from "./MaxWidthWrapper";
 
 // ✅ Server Component Navbar
 export const Navbar = async () => {
@@ -14,8 +15,8 @@ export const Navbar = async () => {
 
   return (
     <nav className="sticky inset-x-0 top-0 z-30 h-14 w-full border-b border-gray-200 bg-white/75 backdrop-blur-lg transition-all">
-      <div className="flex h-14 items-center justify-between px-4 sm:px-6 lg:px-8">
-        {/* Logo / Brand */}
+      <MaxWidthWrapper className="flex h-14 items-center justify-between px-4 sm:px-6 lg:px-8">
+        {/* Logo */}
         <Link href="/" className="z-40 font-semibold text-lg">
           DocuBot
         </Link>
@@ -63,7 +64,7 @@ export const Navbar = async () => {
               <Link
                 href="/dashboard"
                 className={buttonVariants({
-                  variant: "ghost",
+                  variant: "outline",
                   size: "sm",
                 })}
               >
@@ -83,7 +84,7 @@ export const Navbar = async () => {
             </>
           )}
         </div>
-      </div>
+      </MaxWidthWrapper>
     </nav>
   );
 };

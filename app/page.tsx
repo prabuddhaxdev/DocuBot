@@ -1,3 +1,4 @@
+import { MaxWidthWrapper } from "@/components/MaxWidthWrapper";
 import { buttonVariants } from "@/components/ui/button";
 import { ArrowRightIcon } from "lucide-react";
 import Image from "next/image";
@@ -7,7 +8,7 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="mb-12 mt-20 sm:mt-32 md:mt-40 flex flex-col items-center justify-center text-center px-4">
+      <MaxWidthWrapper className="mb-12 mt-20 sm:mt-32 md:mt-20 flex flex-col items-center justify-center text-center px-4">
         {/* Announcement */}
         <div className="mx-auto mb-4 flex max-w-fit items-center justify-center space-x-2 overflow-hidden rounded-full border border-gray-200 bg-white px-6 py-2 shadow-md backdrop-blur-sm transition-all hover:border-gray-300 hover:bg-white/50">
           <p className="text-xs sm:text-sm font-semibold text-gray-700">
@@ -38,7 +39,7 @@ export default function Home() {
         >
           Get Started <ArrowRightIcon className="ml-2 size-5" />
         </Link>
-      </section>
+      </MaxWidthWrapper>
 
       {/* Value Proposition Section */}
       <section className="relative isolate">
